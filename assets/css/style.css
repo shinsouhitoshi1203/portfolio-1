@@ -1,0 +1,55 @@
+:root {
+    --normal-font: "DM Sans", sans-serif;
+    --normal-color: #51586A;
+
+}
+
+::selection{
+    background: transparent; color: #bc2f00;
+}
+::-webkit-scrollbar {background: transparent; width: 7px; height: 7px;}
+::-webkit-scrollbar-thumb {background: var(--hyper-cta); width: 7px; height: 7px; border-radius: 3.5px;}
+
+*, ::before, ::after {box-sizing: border-box;}
+html {font-size: 62.5%;}
+html,body {scroll-behavior: smooth;}
+a {text-decoration: none;}
+ul {list-style-type: none; padding: 0; margin: 0;text-indent: 0;}
+
+body {
+    color: var(--normal-text); font-size: 1.8rem; font-family: var(--normal-font); font-weight: 400;
+}
+
+input, button {
+    outline: none; padding: 0;margin: 0;border: 0;
+    color: inherit; font-size: inherit; font-family: inherit; font-weight: inherit;
+    min-width: 0;
+}
+
+input[type="button"],button {
+    cursor: pointer;
+}
+
+a, i {
+    text-decoration: none; color: inherit; 
+}
+
+
+/* headings */
+
+/* page */
+    
+/* common selectors */
+    /* content margin */
+    
+    /* tabs */
+    
+    /* logo brand */
+    
+    /* navigations */
+    
+    /* selections for tabs */
+    
+    /* buttons */
+        
+        
