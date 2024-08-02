@@ -10,7 +10,7 @@
         .header__ctaMail:hover .header__email{color: var(--bg-1);}
 
         /* header.brand */
-        .header__logo {width: 100px;height: 100px;background: url(./assets/img/general/icon/brand.png) center/cover no-repeat; transition: transform .3s; position: absolute; left: 50%; transform: translateX(-50%);}
+        .header__logo {width: 75px;height: 75px;background: url(./assets/img/general/icon/brand.png) center/cover no-repeat; transition: transform .3s; position: absolute; left: 50%; transform: translateX(-50%); margin-top: 20px;margin-bottom: 20px;}
         .header__logo:hover {transform: translateX(-50%) scale(1.1);}
 
         /* header.navbar */
@@ -22,7 +22,7 @@
             .header__navbar a:hover::after {transform: scaleX(1);}
     
     /* section.hero */
-    .hero {background: var(--bg-2); height: calc(100vh - 109px); position: relative; max-height: 869px;min-height: 650px;overflow: hidden;}
+    .hero {background: var(--bg-2); height: calc(100vh - 86px); position: relative; max-height: 869px;min-height: 650px;overflow: hidden;}
         /* section.hero.backgrounds */
         .hero__bg {height: 100%; position: absolute; top: 0;left: 50%; transform: translateX(-50%);  }
             .hero__bg img:first-child {position: absolute; bottom: -117px; left: -270px; }

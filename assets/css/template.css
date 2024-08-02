@@ -61,7 +61,7 @@ p {line-height: 1.7;}
     /* buttons */
     .button {padding: 16px 37px; transition: color .3s, background .3s, border-color .3s; cursor: pointer; border: 3px solid transparent; font-weight: 700;}
     .button1 {color: #FDFDFD; background: var(--bg-1);}
-    .button1:hover {color: var(--title-color); background: #FDFDFD; border-color: var(--bg-1);}
+    .button1:hover {color: var(--bg-1); background: #FDFDFD; border-color: var(--bg-1);}
     .button2 {background: #fff; color: var(--title-color);}
     .button2:hover {color: #fff; background: var(--title-color); border-color: #fff}
         
