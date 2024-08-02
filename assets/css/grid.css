@@ -1,0 +1,152 @@
+/* 
+    ---   12-column grid system   ---
+    ---   @ shinsouhitoshi.1203   ---
+
+    =================================
+    ===     casual  structures    ===
+    =================================
+
+    .container
+    |----------> .row
+                 |--------> .col
+                 |--------> .col
+                 |--------> .col
+                 |--------> .col
+
+            
+*/
+
+
+/* <!--
+1. Gutters chưa hoạt động với class "row" "col"   ✓ 
+2. Bị mất gutters khi không có biến "--spacer"    ✓
+3. Chưa kết hợp được "row-cols-*" và "col-*"      ✓
+4. Một vài chỗ code chưa tối ưu:
+  - Class "container-fluid" thiếu padding         ✓
+  - Thêm g-0 cho các breakpoints
+--> */
+
+/* main structure */
+    /* ~ declaring variables ~ */
+    .container {
+        --base: 12;         /* 12-column grid system / column base */
+        --grow: 1;          /* number of fraction : flex-grow: 3 ==> 3/12 cBase */
+        --rowNum: 1;        /* determine how many columns a row should have */
+        --offsetCell: 0;    /* default offset for all cases */
+        --gutterSpace: 20px /* gutter default space with device < 576px */
+    }
+
+    /* casual structures */
+        /* container */
+        .container, .container-fluid {width: 100%;padding-left: calc(var(--gutterSpace) / 2);padding-right: calc(var(--gutterSpace) / 2); margin-left: auto;margin-right: auto;}
+        
+        /* gutter options */
+        .row[class*=row-cols-] > *, 
+        .row [class*=col-], .col
+
+        {padding-left: calc(var(--gutterSpace) / 2); padding-right: calc(var(--gutterSpace) / 2);}
+
+        /* rows */
+        .row {display: flex; flex-wrap: wrap; margin-left: calc(-1 * var(--gutterSpace) / 2); margin-right: calc(-1 * var(--gutterSpace) / 2);}
+            /* row / cols general customization */
+            .row[class*=row-cols-] > * {flex: 0 0 auto; width: calc(100% / var(--rowNum)); }
+            .row-cols-1 > * {--rowNum: 1} .row-cols-2 > * {--rowNum: 2} .row-cols-3 > * {--rowNum: 3} 
+            .row-cols-4 > * {--rowNum: 4} .row-cols-5 > * {--rowNum: 5} .row-cols-6 > * {--rowNum: 6}
+
+        /* columns */
+        .col{flex: 1 0;}
+            /* col/particular customization  */
+                /* column-grow */
+                .row [class*=col-] {flex: 0 0 auto; width: calc(100% / var(--base) * var(--grow)); }
+
+                .col-1 {--grow: 1} .col-2 {--grow: 2} .col-3 {--grow: 3} .col-4 {--grow: 4} .col-5 {--grow: 5} .col-6 {--grow: 6}
+                .col-7 {--grow: 7} .col-8 {--grow: 8} .col-9 {--grow: 9} .col-10 {--grow: 10} .col-11 {--grow: 11} .col-12 {--grow: 12}
+
+                /* column-offset */
+                .row [class*=offset-] {margin-left: calc(100% / var(--base) * var(--offsetCell))}
+
+                .offset-0 {--offsetCell: 0} .offset-1 {--offsetCell: 1} .offset-2 {--offsetCell: 2} .offset-3 {--offsetCell: 3} .offset-4 {--offsetCell: 4} .offset-5 {--offsetCell: 5} 
+                .offset-6 {--offsetCell: 6} .offset-7 {--offsetCell: 7} .offset-8 {--offsetCell: 8} .offset-9 {--offsetCell: 9} .offset-10 {--offsetCell: 10} .offset-11 {--offsetCell: 11} 
+
+    /* modifications */
+        /* gutter x0 */
+        .g-0 {--gutterSpace: 0;} 
+
+
+/* responsive/breakpoints */
+    /* 576px <= screen <= 768px  :: sm  */
+    @media screen and (min-width: 576px) {
+        .container {max-width: 540px;}
+        .g-sm-0 {--gutterSpace: 0}
+        /* row/general customization with responsive */
+        .row[class*=row-cols-sm-] > * {flex: 0 0 auto; width: calc(100% / var(--rowNum));}
+        .row-cols-sm-1 > * {--rowNum: 1} .row-cols-sm-2 > * {--rowNum: 2} .row-cols-sm-3 > * {--rowNum: 3} 
+        .row-cols-sm-4 > * {--rowNum: 4} .row-cols-sm-5 > * {--rowNum: 5} .row-cols-sm-6 > * {--rowNum: 6}
+
+        /* col / particular customization with responsive */
+            /* col / column grow */
+            .col-sm-1 {--grow: 1} .col-sm-2 {--grow: 2} .col-sm-3 {--grow: 3} .col-sm-4 {--grow: 4} .col-sm-5 {--grow: 5} .col-sm-6 {--grow: 6}
+            .col-sm-7 {--grow: 7} .col-sm-8 {--grow: 8} .col-sm-9 {--grow: 9} .col-sm-10 {--grow: 10} .col-sm-11 {--grow: 11} .col-sm-12 {--grow: 12}
+            /* col / column offset */
+            .offset-sm-0 {--offsetCell: 0} .offset-sm-1 {--offsetCell: 1} .offset-sm-2 {--offsetCell: 2} .offset-sm-3 {--offsetCell: 3} .offset-sm-4 {--offsetCell: 4} .offset-sm-5 {--offsetCell: 5} 
+                .offset-sm-6 {--offsetCell: 6} .offset-sm-7 {--offsetCell: 7} .offset-sm-8 {--offsetCell: 8} .offset-sm-9 {--offsetCell: 9} .offset-sm-10 {--offsetCell: 10} .offset-sm-11 {--offsetCell: 11} 
+    }
+
+    /* 768px <= screen <= 992px  :: md  */
+    @media screen and (min-width: 768px) {
+        .container {max-width: 720px; --gutterSpace: 15px;}
+        .g-md-0 {--gutterSpace: 0}
+        /* row/general customization with responsive */
+        .row[class*=row-cols-md-] > * {flex: 0 0 auto; width: calc(100% / var(--rowNum));}
+        .row-cols-md-1 > * {--rowNum: 1} .row-cols-md-2 > * {--rowNum: 2} .row-cols-md-3 > * {--rowNum: 3} 
+        .row-cols-md-4 > * {--rowNum: 4} .row-cols-md-5 > * {--rowNum: 5} .row-cols-md-6 > * {--rowNum: 6}
+
+        /* col / particular customization with responsive */
+            /* col / column-grow */
+            .col-md-1 {--grow: 1} .col-md-2 {--grow: 2} .col-md-3 {--grow: 3} .col-md-4 {--grow: 4} .col-md-5 {--grow: 5} .col-md-6 {--grow: 6}
+            .col-md-7 {--grow: 7} .col-md-8 {--grow: 8} .col-md-9 {--grow: 9} .col-md-10 {--grow: 10} .col-md-11 {--grow: 11} .col-md-12 {--grow: 12}
+            /* col / column-offset */
+            .offset-md-0 {--offsetCell: 0} .offset-md-1 {--offsetCell: 1} .offset-md-2 {--offsetCell: 2} .offset-md-3 {--offsetCell: 3} .offset-md-4 {--offsetCell: 4} .offset-md-5 {--offsetCell: 5} 
+                .offset-md-6 {--offsetCell: 6} .offset-md-7 {--offsetCell: 7} .offset-md-8 {--offsetCell: 8} .offset-md-9 {--offsetCell: 9} .offset-md-10 {--offsetCell: 10} .offset-md-11 {--offsetCell: 11} 
+    }
+
+    /* 992px <= screen <= 1200px :: lg  */
+    @media screen and (min-width: 992px) {
+        .container {max-width: 960px; --gutterSpace: 30px}
+        .g-lg-0 {--gutterSpace: 0}
+
+        /* row/general customization with responsive */
+        .row[class*=row-cols-lg-] > * {flex: 0 0 auto; width: calc(100% / var(--rowNum));}
+        .row-cols-lg-1 > * {--rowNum: 1} .row-cols-lg-2 > * {--rowNum: 2} .row-cols-lg-3 > * {--rowNum: 3} 
+        .row-cols-lg-4 > * {--rowNum: 4} .row-cols-lg-5 > * {--rowNum: 5} .row-cols-lg-6 > * {--rowNum: 6}
+
+        /* col / particular customization with responsive */
+            /* col / column grow */
+            .col-lg-1 {--grow: 1} .col-lg-2 {--grow: 2} .col-lg-3 {--grow: 3} .col-lg-4 {--grow: 4} .col-lg-5 {--grow: 5} .col-lg-6 {--grow: 6}
+            .col-lg-7 {--grow: 7} .col-lg-8 {--grow: 8} .col-lg-9 {--grow: 9} .col-lg-10 {--grow: 10} .col-lg-11 {--grow: 11} .col-lg-12 {--grow: 12}
+            /* col / column-offset */
+            .offset-lg-0 {--offsetCell: 0} .offset-lg-1 {--offsetCell: 1} .offset-lg-2 {--offsetCell: 2} .offset-lg-3 {--offsetCell: 3} .offset-lg-4 {--offsetCell: 4} .offset-lg-5 {--offsetCell: 5} 
+            .offset-lg-6 {--offsetCell: 6} .offset-lg-7 {--offsetCell: 7} .offset-lg-8 {--offsetCell: 8} .offset-lg-9 {--offsetCell: 9} .offset-lg-10 {--offsetCell: 10} .offset-lg-11 {--offsetCell: 11} 
+    }
+
+    /* 1200px <= screen >= 1400px:: xl  */
+    @media screen and (min-width: 1200px) {
+        .container {max-width: 1170px;}
+        .g-xl-0 {--gutterSpace: 0}
+
+        /* row/general customization with responsive */
+        .row[class*=row-cols-xl-] > * {flex: 0 0 auto; width: calc(100% / var(--rowNum));}
+        .row-cols-xl-1 > * {--rowNum: 1} .row-cols-xl-2 > * {--rowNum: 2} .row-cols-xl-3 > * {--rowNum: 3} 
+        .row-cols-xl-4 > * {--rowNum: 4} .row-cols-xl-5 > * {--rowNum: 5} .row-cols-xl-6 > * {--rowNum: 6}
+
+        /* col / particular customization with responsive */
+            /* col / column grow */
+            .col-xl-1 {--grow: 1} .col-xl-2 {--grow: 2} .col-xl-3 {--grow: 3} .col-xl-4 {--grow: 4} .col-xl-5 {--grow: 5} .col-xl-6 {--grow: 6}
+            .col-xl-7 {--grow: 7} .col-xl-8 {--grow: 8} .col-xl-9 {--grow: 9} .col-xl-10 {--grow: 10} .col-xl-11 {--grow: 11} .col-xl-12 {--grow: 12}
+            /* col / column-offset */
+            .offset-xl-0 {--offsetCell: 0} .offset-xl-1 {--offsetCell: 1} .offset-xl-2 {--offsetCell: 2} .offset-xl-3 {--offsetCell: 3} .offset-xl-4 {--offsetCell: 4} .offset-xl-5 {--offsetCell: 5} 
+                .offset-xl-6 {--offsetCell: 6} .offset-xl-7 {--offsetCell: 7} .offset-xl-8 {--offsetCell: 8} .offset-xl-9 {--offsetCell: 9} .offset-xl-10 {--offsetCell: 10} .offset-xl-11 {--offsetCell: 11} 
+    }
+
+    
+

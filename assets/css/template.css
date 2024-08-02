@@ -1,11 +1,15 @@
 :root {
     --normal-font: "DM Sans", sans-serif;
     --normal-color: #51586A;
-
+    --title-color: #080415;
+    --bg-1: #5D3BEE;
+    --bg-2: #FBFAFF;
+    --main-width: 1170px;
+    --second-width: 1330px;
 }
 
 ::selection{
-    background: transparent; color: #bc2f00;
+    background: transparent; color: #1e1252; background: #7d62f82b;
 }
 ::-webkit-scrollbar {background: transparent; width: 7px; height: 7px;}
 ::-webkit-scrollbar-thumb {background: var(--hyper-cta); width: 7px; height: 7px; border-radius: 3.5px;}
