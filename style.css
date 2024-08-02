@@ -65,4 +65,4 @@
             .services__sv:hover .services__svName:hover{color: var(--title-color);}
                 .services__avatar {width: 74px; height: 74px;border-radius: 50%; border: 1px solid rgba(8 4 26 / .05); display: flex; align-items: center; justify-content: center; margin-bottom: 22px;}
                 .services__svName {margin-bottom: 15px;display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient:vertical; overflow: hidden;}
-                .services__svName:hover {color: var(--bg-1); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient:vertical; overflow: hidden;}
+                .services__svDesc {display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient:vertical; overflow: hidden;}
