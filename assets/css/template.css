@@ -67,4 +67,7 @@ p {line-height: 1.7;}
     .button1:hover {color: var(--bg-1); background: #FDFDFD; border-color: var(--bg-1);}
     .button2 {background: #fff; color: var(--title-color);}
     .button2:hover {color: #fff; background: var(--title-color); border-color: #fff}
-        
+    /* href */
+    .href {font-weight: 700; display: inline-block; position: relative;}
+        .href::after {content: ''; display: block; position: absolute; bottom: -5px;left: 0; width: 100%;height: 1.5px; background: var(--title-color); transition: transform .3s; transform: scaleX(0); transform-origin: left center;}
+        .href:hover::after {transform: scaleX(1);}
