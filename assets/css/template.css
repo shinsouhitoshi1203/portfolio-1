@@ -22,7 +22,7 @@ a {text-decoration: none;}
 ul {list-style-type: none; padding: 0; margin: 0;text-indent: 0;}
 
 body {
-    color: var(--normal-text); font-size: 1.8rem; font-family: var(--normal-font); font-weight: 400;
+    color: var(--normal-color); font-size: 1.8rem; font-family: var(--normal-font); font-weight: 400;
 }
 
 input, button {
@@ -48,6 +48,8 @@ h1 {letter-spacing: -3.2px;font-size: 8rem;line-height: 0.95; }
 h2 {letter-spacing: -1.68px;font-size: 5.6rem;line-height: 1.2;}
 h3 {letter-spacing: -1.28px;font-size: 3.2rem;line-height: 1.25;}
 p {line-height: 1.7;}
+
+.pseudo {display: flex; align-items: center; gap: 9px; color: var(--bg-1); font-size: 3.2rem; letter-spacing: -1.28px; font-weight: 500; line-height: 1.25;}
 /* page */
     
 /* common selectors */
