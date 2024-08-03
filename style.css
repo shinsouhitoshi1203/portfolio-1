@@ -37,6 +37,7 @@
             .hero__introduction {align-self: flex-end; padding-top: 38px;padding-bottom: 38px;margin-left: -30px;} .hero__introductionCol {display: flex;}
                 .hero__desc {margin-right: 130px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient:vertical; overflow: hidden;}
                 .hero__cta {margin-top: 50px;margin-bottom: 104px; display: flex; align-items: center;gap: 30px;}
+                    
                 .hero__snsList {display: flex;align-items: center;gap: 15px; }
                     .hero__snsList span {font-size: 1.6rem; font-weight: 500;}
                     .hero__snsWrap {display: flex; gap: 20px;}
