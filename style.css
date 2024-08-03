@@ -51,7 +51,7 @@
             .company__sep {content: ''; display: inline-block; width: 100%; height: 2px; background: var(--bg-1); margin-right: 13px; margin-top: 22px;}
 
         .company__list {display: flex; flex-wrap: wrap; gap: 36px; justify-content: space-between;}
-            .company {display: flex; align-items: center; gap: 13px;}
+            .company {display: flex; align-items: center; gap: 13px; color: var(--title-color);}
     /* main/services / sv */
         .services__title {text-align: center;margin-left: auto;margin-right: auto;} 
         .services__desc {text-align: center; max-width: 534px; margin-left: auto;margin-right: auto; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical; overflow: hidden;}
