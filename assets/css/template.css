@@ -89,7 +89,7 @@ p {line-height: 1.7;}
         .ctaMail:hover .email{color: var(--bg-1);}
 
         /* header.brand */
-        .logo {width: 75px;height: 75px;background: url(./assets/img/general/icon/brand.png) center/cover no-repeat; transition: transform .3s; position: absolute; left: 50%; transform: translateX(-50%); margin-top: 20px;margin-bottom: 20px;}
+        .logo {width: 75px;height: 75px;background: url(./../img/general/icon/brand.png) center/cover no-repeat; transition: transform .3s; position: absolute; left: 50%; transform: translateX(-50%); margin-top: 20px;margin-bottom: 20px;}
         .logo:hover {transform: translateX(-50%) scale(1.1);}
 
         /* header.navbar */
