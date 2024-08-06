@@ -1,25 +1,7 @@
 /* index.html */
     /* header */
     .header {background: #FBFAFF; position: sticky; top: 0;z-index: 1000;}
-    .header__wrapper {max-width: var(--second-width); width: 100%; display: flex; align-items: center; justify-content: space-between; margin-left: auto;margin-right: auto; padding: 20px; position: relative;}
-        /* header.contact */
-        .header__ctaMail {display: flex; align-items: center; gap: 10px;}
-            .header__ctaMailIcon {border: 1px solid var(--pattern-color); width: 46px; height: 46px; border-radius: 50%; transition: border-color 0.3s; display: flex; align-items: center;justify-content: center;}
-            .header__email {font-weight: 500;font-size: 2.2rem;color: var(--title-color); text-decoration: underline; transition: color .3s;}
-        .header__ctaMail:hover .header__ctaMailIcon {border-color: var(--bg-1);}
-        .header__ctaMail:hover .header__email{color: var(--bg-1);}
-
-        /* header.brand */
-        .header__logo {width: 75px;height: 75px;background: url(./assets/img/general/icon/brand.png) center/cover no-repeat; transition: transform .3s; position: absolute; left: 50%; transform: translateX(-50%); margin-top: 20px;margin-bottom: 20px;}
-        .header__logo:hover {transform: translateX(-50%) scale(1.1);}
-
-        /* header.navbar */
-        .header__navbar ul {display: flex; align-items: center; gap: 40px;}
-            .header__navbar a {transition: color .3s, font-weight .3s; display: inline-block; position: relative; transform: translateX(2px);}
-            .header__navbar a::before {display: block;content: attr(title);font-weight: bold;height: 0;overflow: hidden;visibility: hidden; padding: 2px 3px;}
-            .header__navbar a::after {content: ''; width: calc(100% - 4px); height: 2px;border-radius: 1px; background: var(--bg-1); position: absolute; bottom: -10px; left: 0; transform: scaleX(0); transition: transform .3s; }
-            .header__navbar a:hover {color: var(--bg-1); font-weight: 700;}
-            .header__navbar a:hover::after {transform: scaleX(1);}
+    
     
     /* section.hero */
     .hero {background: var(--bg-2); height: calc(100vh - 86px); position: relative; max-height: 869px;min-height: 650px;overflow: hidden;}
