@@ -38,7 +38,7 @@ input[type="button"],button {
 a, i {
     text-decoration: none; color: inherit; 
 }
-
+input[type="checkbox"] {display: none;}
 
 /* headings */
 h1,h2,h3,p {margin: 0;padding: 0;}
