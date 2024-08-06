@@ -60,7 +60,11 @@ p {line-height: 1.7;}
     /* logo brand */
     
     /* navigations */
-    
+    .bars {display: flex; gap: 15px; align-items: center; justify-content: center;}
+    .pack {width: 16px; height: 16px; border-radius: 50%; background: var(--title-color); opacity: .2; transition: opacity .3s;}
+    .pack:hover {opacity: 1;}
+    .pack--selected {width: 20px;height: 20px;border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid var(--bg-1); opacity: 1; background: transparent;}
+    .pack--selected::after {content: ''; display: block; width: 12px;height: 12px; border-radius: 50%; background: var(--bg-1);}
     /* selections for tabs */
     
     /* buttons */
