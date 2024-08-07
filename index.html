@@ -42,7 +42,7 @@
                     <p class="email">hi@arif.interactive</p>
                 </a>
                 <a class="logo" href="./index.html"></a>
-                <nav class="navbar">
+                <nav class="navbar header__navbar">
                     <ul>
                         <li>
                             <a href="#!" title="Projects">Projects</a>
@@ -58,7 +58,11 @@
                         </li>
                     </ul>
                 </nav>
+                <input type="checkbox" name="navbar-small" id="navbar-small">
+                <label for="navbar-small" class="header__navbar--small"></label>
+                <div class="header__panel"></div>
             </div>
+            <div class="header__sep"></div>
         </header>
         <section class="hero">
             <div class="container hero__bg ">
@@ -67,12 +71,12 @@
             </div>
             <div class="container hero__main">
                 <div class="row hero__wrapper">
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 hero__arif col-12">
                         <figure class="hero__author">
                             <img src="./assets/img/page/index/arif.png" alt="arif">
                         </figure>
                     </div>
-                    <div class="col-lg-5 offset-lg-2 hero__introductionCol">
+                    <div class="col-lg-5 offset-lg-2  col-12 offset-0 hero__introductionCol">
                         <article class="hero__introduction">
                             <h1 class="hero__title">An Interactive Designer</h1>
                             <p class="desc hero__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
@@ -147,7 +151,7 @@
                     <h2 class="services__title">Specialities</h2>
                     <p class="desc services__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
                     <div class="row services__list">
-                        <div class="col-4 ">
+                        <div class="col-md-4 col-12">
                             <section class="services__sv">
                                 <div class="services__avatar">
                                     <img src="./assets/img/page/index/sv-1.png" alt="Product design">
@@ -156,7 +160,7 @@
                                 <p class="desc services__svDesc">Lorem ipsum dolor sit amet, solor adipiscing elit. Non nisl solor ut elementum turpis.</p>
                             </section>
                         </div>
-                        <div class="col-4 ">
+                        <div class="col-md-4 col-12">
                             <section class="services__sv">
                                 <div class="services__avatar">
                                     <img src="./assets/img/page/index/sv-2.png" alt="UI/UX Design">
@@ -165,7 +169,7 @@
                                 <p class="desc services__svDesc">Lorem ipsum dolor sit amet, solor adipiscing elit. Non nisl solor ut elementum turpis.</p>
                             </section>
                         </div>
-                        <div class="col-4 ">
+                        <div class="col-md-4 col-12">
                             <section class="services__sv">
                                 <div class="services__avatar">
                                     <img src="./assets/img/page/index/sv-3.png" alt="Interactive design">
@@ -175,9 +179,14 @@
                             </section>
                         </div>
                     </div>
+                    <div class="bars services__bars">
+                        <a href="#!" class="pack"></a>
+                        <a href="#!" class="pack pack--selected"></a>
+                        <a href="#!" class="pack"></a>
+                    </div>
                 </div>
             </section>
-            <section class="projects pj common-section">
+            <section class="projects pj common-section" style="position: relative; z-index: 11;">
                 <section class="container pj__heading">
                     <h2 class="pj__title">Take a look at my recent projects</h2>
                     <p class="desc pj__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
@@ -256,10 +265,10 @@
                 </div>
                 <button class="button button2 pj__cta">All Projects</button>
             </section>
-            <section class="about ab">
+            <section class="about ab" style="">
                 <div class="container ">
                     <div class="row">
-                        <div class="col-lg-6 offset-lg-3 ab__heading">
+                        <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-12 offset-0 ab__heading">
                             <p class="pseudo ab__pseudo">
                                 <span>Hey,,,,It’s Arif</span>
                                 <img src="./assets/img/general/icon/wave.svg" alt="">

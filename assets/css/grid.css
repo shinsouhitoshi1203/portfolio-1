@@ -33,7 +33,7 @@
         --grow: 1;          /* number of fraction : flex-grow: 3 ==> 3/12 cBase */
         --rowNum: 1;        /* determine how many columns a row should have */
         --offsetCell: 0;    /* default offset for all cases */
-        --gutterSpace: 20px /* gutter default space with device < 576px */
+        --gutterSpace: 40px /* gutter default space with device < 576px */
     }
 
     /* casual structures */
@@ -43,7 +43,6 @@
         /* gutter options */
         .row[class*=row-cols-] > *, 
         .row [class*=col-], .col
-
         {padding-left: calc(var(--gutterSpace) / 2); padding-right: calc(var(--gutterSpace) / 2);}
 
         /* rows */
