@@ -1,7 +1,6 @@
 /* index.html */
     /* header */
-    .header {background: #FBFAFF; position: sticky; top: 0;z-index: 1000;}
-    
+    .header {background: #FBFAFF; position: sticky; top: 0;z-index: 1000; transition: box-shadow .3s;}
     
     /* section.hero */
     .hero {background: var(--bg-2); height: calc(100vh - 86px); position: relative; max-height: 869px;min-height: 650px;overflow: hidden;}

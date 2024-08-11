@@ -89,7 +89,14 @@ p {line-height: 1.7;}
         .href:hover::after {transform: scaleX(1);}
 
 /* objects */
+    /* scroll */
+    .scroll {display: flex; align-items: center; justify-content: center; width: 60px;height: 60px;background: var(--bg-2); border: 2px solid currentColor; position: fixed; bottom: -120px;right: 30px; border-radius: 50%; transition: .3s ease-in-out; color: var(--title-color); z-index: 99; box-shadow: 1px 1px 30px 1px #0804152b}
+    .scroll--appeared {bottom: 40px;}
+    .scroll::after {content: ''; display: block; width: 3px; height: 28px; border-radius: 1.5px; background: currentColor; transition: .3s;}
+    .scroll:hover {color: var(--bg-1); box-shadow: 1px 1px 30px 10px #5c3bee2b}
+    .scroll:hover::after {transform: rotate(-180deg);}
     /* header and footers */
+    .header--shadow{box-shadow: 0 3px 3px #0804152b;}
     .out__wrapper {max-width: var(--second-width); width: 100%; display: flex; align-items: center; justify-content: space-between; margin-left: auto;margin-right: auto; padding: 20px; position: relative;}
         /* header.contact */
         .ctaMail {display: flex; align-items: center; gap: 10px;}
@@ -126,6 +133,7 @@ p {line-height: 1.7;}
     .header__sep {width: calc(100% - 14px); margin: 0 7px; height: 2px; background: #D6D3E2; visibility: hidden;}
         /* responsive */
         @media screen and (max-width: 991px) {
+            .header--shadow{box-shadow: none;}
             .out__wrapper {justify-content: flex-end; gap: 10px;}
                 /* header.email */
                 .email {display: none;}
