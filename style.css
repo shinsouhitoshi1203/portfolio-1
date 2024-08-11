@@ -220,7 +220,7 @@
     /* main/env. */
     .env__bar {display: flex;}
     /* main / cta */
-    .cta__wrapper {padding-top: 30px; padding-bottom: 30px; padding-left: 0;padding-right: 0;}
+    .cta__wrapper {padding: 30px 20px;}
     .cta__p1,.cta__p3 {display: none;}
     .cta__title {max-width: 250px;}
     .cta__desc {max-width: initial; width: 100%;}

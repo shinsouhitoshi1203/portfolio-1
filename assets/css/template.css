@@ -113,14 +113,13 @@ p {line-height: 1.7;}
         .header__navbar--small {border: 1px solid var(--pattern-color); width: 46px; height: 46px; border-radius: 50%; transition: border-color 0.3s; display: flex; align-items: center;justify-content: center; display: none; flex-direction: column; cursor: pointer;}
         .header__navbar--small:hover {border-color: var(--bg-1); }
         .header__navbar--small::before,.header__navbar--small::after {content: ''; display: block; width: 17px; height: 2px; background: var(--bg-1); border-radius: 1px; transition: transform .3s;}
-        /* .header__navbar--small::before {transform: translateY(-2px);}
-        .header__navbar--small::after {transform: translateY(2px);} */
-        .header__navbar--small::before {transform: translateY(1px);}
-        .header__navbar--small::after {transform: translateY(-1px);}
 
-        input:checked + .header__navbar--small::before {transform: translateY(-2px);}
-        input:checked + .header__navbar--small::after {transform: translateY(2px);}
-        input:checked ~ .header__panel {visibility: visible;}
+        .header__navbar--small::before {transform: translateY(4px);}
+        .header__navbar--small::after {transform: translateY(-4px);}
+
+        input:checked + .header__navbar--small::before {transform: translateY(1px);}
+        input:checked + .header__navbar--small::after {transform: translateY(-1px);}
+        /* input:checked ~ .header__panel {visibility: visible;} */
     /* header.small navbar */
     .header__panel {width: 100%; height: calc(100vh - 88px); position: fixed; z-index: 11; background: #e0e0ff; top: 88px;left: 0; visibility: hidden;transition: opacity .3s;}
     /* header.seperate */
@@ -137,6 +136,7 @@ p {line-height: 1.7;}
                 /* header.logo */
                 .logo {background-image: url(./../img/general/icon/brand.png); background-size: contain; width: 44px;height: 44px; left: 37px;}
             .header__sep{visibility: visible;}
+            input:checked ~ .header__panel {visibility: visible;}
         }
 
     /* for footer */
@@ -157,6 +157,7 @@ p {line-height: 1.7;}
                 .header__navbar--small {display: flex;}
                 /* header.logo */
                 .footer__logo {background-image: url(./../img/general/icon/brand.png); background-size: contain; width: 44px;height: 44px; position: initial; transform: translate(0, 0);}
+                .footer__logo:hover{transform: scale(1.1);}
             .footer__logo {order: 1;}
             .footer__navbar {order: 2;}
             .footer__ctaMail {order: 3;}
