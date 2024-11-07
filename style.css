@@ -18,7 +18,11 @@
             .hero__introduction {align-self: flex-end; padding-top: 38px;padding-bottom: 38px;margin-left: -30px;} .hero__introductionCol {display: flex;}
                 .hero__desc {margin-right: 130px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient:vertical; overflow: hidden;}
                 .hero__cta {margin-top: 50px;margin-bottom: 104px; display: flex; align-items: center;gap: 30px;}
-                    
+                .hero__title {cursor: default;}
+                .hero__title-highlight {position: relative; display: inline-flex;}
+                    .highlight {display: inline-block;inset: 2px -5px;position: absolute;background: rgba(255, 255, 0, 0.391);z-index: -1; padding: 5px 10px; animation: wipe .3s .75s ease-out; animation-fill-mode: forwards; transform-origin: left center; transform: scaleX(0); transition: background .3s;}
+                    .hero__title-highlight:hover .highlight {background: rgba(255 255 0 / 1);}
+
                 .hero__snsList {display: flex;align-items: center;gap: 15px; }
                     .hero__snsList span {font-size: 1.6rem; font-weight: 500;}
                     .hero__snsWrap {display: flex; gap: 20px;}
@@ -195,6 +199,7 @@
         .hero__author img { width: 100%; z-index: 1;}
     .hero__introduction {width: 90%; order: 1; margin-top: 50px;}
         .hero__title {margin-right: 58px;}
+        
         .hero__desc {margin-right: 0;}
         .hero__cta {margin-top: 30px; margin-bottom: 25px;}
     /* main/client.title */
@@ -248,5 +253,12 @@
 }
 
 
-
+@keyframes wipe {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
 
