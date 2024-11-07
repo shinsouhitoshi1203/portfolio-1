@@ -29,447 +29,487 @@
         <link rel="stylesheet" href="./assets/css/grid.css">
         <link rel="stylesheet" href="./assets/css/animation.css">
         <link rel="stylesheet" href="./style.css">
+
+        <!-- animations -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
         <!-- javascript formating -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="./assets/js/index.js" async ></script>
+        <script src="./assets/js/scrolling.js" ></script>
+
     </head>
     <body>
-        <header class="header">
-            <div class="out__wrapper header__wrapper">
-                <a href="mailto:hi@arif.interactive" class="ctaMail">
-                    <div class="ctaMailIcon">
-                        <img src="./assets/img/general/icon/mail.svg" alt="">
+        <div class="page__wrapper">
+            <header class="header">
+                <div class="out__wrapper header__wrapper">
+                    <a href="mailto:hi@arif.interactive" class="ctaMail">
+                        <div class="ctaMailIcon">
+                            <img src="./assets/img/general/icon/mail.svg" alt="">
+                        </div>
+                        <p class="email">hi@arif.interactive</p>
+                    </a>
+                    <a class="logo" href="./index.html"></a>
+                    <nav class="navbar navigation_section header__navbar">
+                        <ul>
+                            <li>
+                                <a href="javascript:;" data-target="projects" title="Projects">Projects</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-target="about" title="Journey">Journey</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-target="services" title="Service">Service</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-target="cta" title="Contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <input type="checkbox" name="navbar-small" id="navbar-small">
+                    <label for="navbar-small" class="header__navbar--small"></label>
+                    <div class="header__panel">
+                        <div class="header__panel-wrapper">
+                            <nav class="navigation_section header__panel-nav">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:;" data-target="projects" title="Projects">Projects</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-target="about" title="Journey">Journey</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-target="services" title="Service">Service</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-target="cta" title="Contact">Contact</a>
+                                    </li>
+                                </ul>
+                                <p>©interactiveArif 2021. All rights reserved.</p>
+                            </nav>
+                        </div>
                     </div>
-                    <p class="email">hi@arif.interactive</p>
-                </a>
-                <a class="logo" href="./index.html"></a>
-                <nav class="navbar header__navbar">
-                    <ul>
-                        <li>
-                            <a href="#!" title="Projects">Projects</a>
-                        </li>
-                        <li>
-                            <a href="#!" title="Journey">Journey</a>
-                        </li>
-                        <li>
-                            <a href="#!" title="Service">Service</a>
-                        </li>
-                        <li>
-                            <a href="#!" title="Contact">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-                <input type="checkbox" name="navbar-small" id="navbar-small">
-                <label for="navbar-small" class="header__navbar--small"></label>
-                <div class="header__panel"></div>
-            </div>
-            <div class="header__sep"></div>
-        </header>
-        <section class="hero">
-            <div class="container hero__bg ">
-                <img src="./assets/img/general/pattern/1.svg" alt="">
-                <img src="./assets/img/general/pattern/2.svg" alt="">
-            </div>
-            <div class="container hero__main">
-                <div class="row hero__wrapper">
-                    <div class="col-lg-5 hero__arif col-12">
-                        <figure class="hero__author">
-                            <img src="./assets/img/page/index/arif.png" alt="arif">
-                        </figure>
+                </div>
+                <div class="header__sep"></div>
+            </header>
+            <div class="dummy"></div>
+            <section class="hero">
+                <div class="container hero__bg ">
+                    <img src="./assets/img/general/pattern/1.svg" alt="">
+                    <img src="./assets/img/general/pattern/2.svg" alt="">
+                </div>
+                <div class="container hero__main">
+                    <div class="row hero__wrapper">
+                        <div class="col-lg-5 hero__arif col-12">
+                            <figure class="hero__author" data-aos="fade-up">
+                                <img src="./assets/img/page/index/arif.png" alt="arif">
+                            </figure>
+                        </div>
+                        <div class="col-lg-5 offset-lg-2  col-12 offset-0 hero__introductionCol">
+                            <article class="hero__introduction">
+                                <h1 class="hero__title " data-aos="fade-right" >An Interactive Designer</h1>
+                                <p class="desc hero__desc" data-aos="fade-right" data-aos-delay="100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                                <div class="hero__cta" data-aos="zoom-out" data-aos-delay="200">
+                                    <button class="button button1 hero__book">Book a Call</button>
+                                    <a href="#!" class="href hero__href">My Works</a>
+                                </div>
+                                <div class="hero__snsList" data-aos="zoom-out" data-aos-delay="200">
+                                    <span>Follow me on:</span>
+                                    <div class="hero__snsWrap">
+                                        <a href="#!" class="hero__sns">
+                                            <i class="fa-brands fa-behance"></i>
+                                        </a>
+                                        <a href="#!" class="hero__sns">
+                                            <i class="fa-brands fa-dribbble"></i>
+                                        </a>
+                                        <a href="#!" class="hero__sns">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
                     </div>
-                    <div class="col-lg-5 offset-lg-2  col-12 offset-0 hero__introductionCol">
-                        <article class="hero__introduction">
-                            <h1 class="hero__title">An Interactive Designer</h1>
-                            <p class="desc hero__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
-                            <div class="hero__cta">
-                                <button class="button button1 hero__book">Book a Call</button>
-                                <a href="#!" class="href hero__href">My Works</a>
+                </div>
+            </section>
+            <main>
+                <section class="company common-section">
+                    <div class="container company__wrapper">
+                        <section class="company__intro">
+                            <div class="company__sep"></div>
+                            <h2 class="company__title">Meet my recent clients</h2>
+                        </section>
+                        <section class="company__list">
+                            <div class="company">
+                                <img src="./assets/img/page/index/gg.svg" alt="">
+                                <span>Google</span>
                             </div>
-                            <div class="hero__snsList">
-                                <span>Follow me on:</span>
-                                <div class="hero__snsWrap">
-                                    <a href="#!" class="hero__sns">
-                                        <i class="fa-brands fa-behance"></i>
-                                    </a>
-                                    <a href="#!" class="hero__sns">
-                                        <i class="fa-brands fa-dribbble"></i>
-                                    </a>
-                                    <a href="#!" class="hero__sns">
-                                        <i class="fa-brands fa-instagram"></i>
-                                    </a>
+                            <div class="company">
+                                <img src="./assets/img/page/index/wb.svg" alt="">
+                                <span>Warner Bros</span>
+                            </div>
+                            <div class="company">
+                                <img src="./assets/img/page/index/mc.svg" alt="">
+                                <span>Mailchimp</span>
+                            </div>
+                            <div class="company">
+                                <img src="./assets/img/page/index/ad.svg" alt="">
+                                <span>Adobe</span>
+                            </div>
+                            <div class="company">
+                                <img src="./assets/img/page/index/up.svg" alt="">
+                                <span>Upwork</span>
+                            </div>
+                            <div class="company">
+                                <img src="./assets/img/page/index/cc.svg" alt="">
+                                <span>Creative Cloud</span>
+                            </div>
+                            <div class="company">
+                                <img src="./assets/img/page/index/wo.svg" alt="">
+                                <span>Woocommerce</span>
+                            </div>
+                            <div class="company">
+                                <img src="./assets/img/page/index/cv.svg" alt="">
+                                <span>Canva</span>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <section class="services common-section">
+                    <div class="container services__wrapper">
+                        <h2 class="services__title">Specialities</h2>
+                        <p class="desc services__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                        <div class="row services__list">
+                            <div class="col-md-4 col-12">
+                                <section class="services__sv">
+                                    <div class="services__avatar">
+                                        <img src="./assets/img/page/index/sv-1.png" alt="Product design">
+                                    </div>
+                                    <a href="#!"><h3 class="services__svName">Product design</h3></a>
+                                    <p class="desc services__svDesc">Lorem ipsum dolor sit amet, solor adipiscing elit. Non nisl solor ut elementum turpis.</p>
+                                </section>
+                            </div>
+                            <div class="col-md-4 col-12">
+                                <section class="services__sv">
+                                    <div class="services__avatar">
+                                        <img src="./assets/img/page/index/sv-2.png" alt="UI/UX Design">
+                                    </div>
+                                    <a href="#!"><h3 class="services__svName">UI/UX Design</h3></a>
+                                    <p class="desc services__svDesc">Lorem ipsum dolor sit amet, solor adipiscing elit. Non nisl solor ut elementum turpis.</p>
+                                </section>
+                            </div>
+                            <div class="col-md-4 col-12">
+                                <section class="services__sv">
+                                    <div class="services__avatar">
+                                        <img src="./assets/img/page/index/sv-3.png" alt="Interactive design">
+                                    </div>
+                                    <a href="#!"><h3 class="services__svName">Interactive design</h3></a>
+                                    <p class="desc services__svDesc">Lorem ipsum dolor sit amet, solor adipiscing elit. Non nisl solor ut elementum turpis.</p>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="bars services__bars">
+                            <a href="#!" class="pack"></a>
+                            <a href="#!" class="pack pack--selected"></a>
+                            <a href="#!" class="pack"></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="projects pj common-section" style="position: relative; z-index: 11;">
+                    <section class="container pj__heading">
+                        <h2 class="pj__title">Take a look at my recent projects</h2>
+                        <p class="desc pj__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                    </section>
+                    <div class="container pj__list">
+                        <div class="row pj__listGrid">
+                            <div class="pj__col col-lg-6 col-12" data-aos="zoom-out">
+                                <section class="pj__item">
+                                    <div class="pj__item-bg">
+                                        <div class="pj__pattern"></div>
+                                    </div>
+                                    <div class="pj__information">
+                                        <section class="pj__text">
+                                            <h3 class="pj__project-name">Wally Website</h3>
+                                            <p class="desc pj__project-desc">Lorem ipsum dolor amet, consectetur adipiscing st elit.</p>
+                                            <a href="#!" class="href">Case Study</a>
+                                        </section>
+                                        <figure class="pj__figure">
+                                            <img src="./assets/img/page/index/wally.png" alt="Wally website">
+                                        </figure>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="pj__col col-lg-6 col-12" data-aos="zoom-out">
+                                <section class="pj__item">
+                                    <div class="pj__item-bg">
+                                        <div class="pj__pattern"></div>
+                                    </div>
+                                    <div class="pj__information">
+                                        <section class="pj__text">
+                                            <h3 class="pj__project-name">Banking App</h3>
+                                            <p class="desc pj__project-desc">Lorem ipsum dolor amet, consectetur adipiscing st elit.</p>
+                                            <a href="#!" class="href">Case Study</a>
+                                        </section>
+                                        <figure class="pj__figure">
+                                            <img src="./assets/img/page/index/banking.png" alt="Banking App">
+                                        </figure>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="pj__col col-lg-6 col-12" data-aos="zoom-out">
+                                <section class="pj__item">
+                                    <div class="pj__item-bg">
+                                        <div class="pj__pattern"></div>
+                                    </div>
+                                    <div class="pj__information">
+                                        <section class="pj__text">
+                                            <h3 class="pj__project-name">Web App</h3>
+                                            <p class="desc pj__project-desc">Lorem ipsum dolor amet, consectetur adipiscing st elit.</p>
+                                            <a href="#!" class="href">Case Study</a>
+                                        </section>
+                                        <figure class="pj__figure">
+                                            <img src="./assets/img/page/index/webapp.png" alt="Web App">
+                                        </figure>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="pj__col col-lg-6 col-12" data-aos="zoom-out">
+                                <section class="pj__item">
+                                    <div class="pj__item-bg">
+                                        <div class="pj__pattern"></div>
+                                    </div>
+                                    <div class="pj__information">
+                                        <section class="pj__text">
+                                            <h3 class="pj__project-name">Oculus Website</h3>
+                                            <p class="desc pj__project-desc">Lorem ipsum dolor amet, consectetur adipiscing st elit.</p>
+                                            <a href="#!" class="href">Case Study</a>
+                                        </section>
+                                        <figure class="pj__figure">
+                                            <img src="./assets/img/page/index/oculus.png" alt="Oculus Website">
+                                        </figure>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button button2 pj__cta">All Projects</button>
+                </section>
+                <section class="about ab">
+                    <div class="container ">
+                        <div class="row">
+                            <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-12 offset-0 ab__heading">
+                                <p class="pseudo ab__pseudo">
+                                    <span>Hey,,,,It’s Arif</span>
+                                    <img src="./assets/img/general/icon/wave.svg" alt="">
+                                </p>
+                                <h2 class="ab__title">Interactive Designer</h2>
+                                <p class="desc ab__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1 col-12 offset-0">
+                                <div class="ab__keys">
+                                    <div class="ab__feature">
+                                        <p class="ab__yr">08+</p>
+                                        <p class="ab__exp">Years Experience</p>
+                                    </div>
+                                    <div class="ab__feature">
+                                        <p class="ab__yr">21+</p>
+                                        <p class="ab__exp">Features & Awards</p>
+                                    </div>
+                                    <div class="ab__feature">
+                                        <p class="ab__yr">97%</p>
+                                        <p class="ab__exp">Clients Rating</p>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="ab__videoWrapper">
+                            <img src="./assets/img/page/index/ab.png" alt="about arif">
+                            <span class="ab__videoDesc">Intro Video</span>
+                            <a href="#!" class="ab__videoCTA"></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="testimonial rv">
+                    <div class="rv__bg">
+                        <img src="./assets/img/general/pattern/3.svg" alt="">
+                        <img src="./assets/img/general/pattern/4.svg" alt="">
+                    </div>
+                    <article class="rv__content container">
+                        <h2 class="rv__title">What people says</h2>
+                        <p class="desc rv__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                        <div class="rv__list">
+                            <div class="rv__item">
+                                <p class="rv__quote">“Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.”</p>
+                                <div class="rv__user">
+                                    <div class="rv__avatar"><img src="./assets/img/page/index/user1.png" alt=""></div>
+                                    <span class="rv__username">Joe Elia</span>
+                                    <p class="rv__role">User Interface Design at PCL Lab</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bars">
+                            <a href="#!" class="pack"></a>
+                            <a href="#!" class="pack"></a>
+                            <a href="#!" class="pack pack--selected"></a>
+                            <a href="#!" class="pack"></a>
+                            <a href="#!" class="pack"></a>
+                        </div>
+                    </article>
+                </section>
+                <section class="faq">
+                    <div class="container">
+                        <h2 class="faq__title">A few questions clients normally ask me</h2>
+                        <div class="faq__list">
+                            <div class="faq__item">
+                                <input type="checkbox" name="" id="q-1">
+                                <section class="faq__content">
+                                    <label for="q-1" class="faq__question"><h3>What is your  hourly rate?</h3></label>
+                                    <p class="faq__answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                                </section>
+                                <label for="q-1" class="faq__button"></label>
+                                <div class="faq__bar"></div>
+                            </div>
+                            <div class="faq__item">
+                                <input type="checkbox" name="" id="q-2">
+                                <section class="faq__content">
+                                    <label for="q-2" class="faq__question"><h3>What type of projects do you take on?</h3></label>
+                                    <p class="faq__answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                                </section>
+                                <label for="q-2" class="faq__button"></label>
+                                <div class="faq__bar"></div>
+                            </div>
+                            <div class="faq__item">
+                                <input type="checkbox" name="" id="q-3">
+                                <section class="faq__content">
+                                    <label for="q-3" class="faq__question"><h3>How do you charge for projects ?</h3></label>
+                                    <p class="faq__answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                                </section>
+                                <label for="q-3" class="faq__button"></label>
+                                <div class="faq__bar"></div>
+                            </div>
+                            <div class="faq__item">
+                                <input type="checkbox" name="" id="q-4">
+                                <section class="faq__content">
+                                    <label for="q-4" class="faq__question"><h3>What time-zone do you work in?</h3></label>
+                                    <p class="faq__answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                                </section>
+                                <label for="q-4" class="faq__button"></label>
+                                <div class="faq__bar"></div>
+                            </div>
+                            <div class="faq__item">
+                                <input type="checkbox" name="" id="q-5">
+                                <section class="faq__content">
+                                    <label for="q-5" class="faq__question"><h3>How often can we communicate?</h3></label>
+                                    <p class="faq__answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                                </section>
+                                <label for="q-5" class="faq__button"></label>
+                                <div class="faq__bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="env">
+                    <div class="container">
+                        <section class="env__heading">
+                            <h2 class="env__title">My atmosphere</h2>
+                            <p class="desc env__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                            <a href="#!" class="href env__href">@interaction_arif</a>
+                        </section>
+                        <div class="row env__list">
+                            <div class="col-md-4 col-sm-6 col-12 col" data-aos="slide-right">
+                                <img src="./assets/img/page/index/e1.png" alt="">
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12 col" data-aos="slide-up">
+                                <img src="./assets/img/page/index/e2.png" alt="">
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12 col" data-aos="slide-left">
+                                <img src="./assets/img/page/index/e3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bars env__bar">
+                            <a href="#!" class="pack"></a>
+                            <a href="#!" class="pack"></a>
+                            <a href="#!" class="pack pack--selected"></a>
+                            <a href="#!" class="pack"></a>
+                            <a href="#!" class="pack"></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="cta" data-aos="zoom-out">
+                    <div class="cta__wrapper">
+                        <div class="cta__bg">
+                            <img src="./assets/img/general/pattern/5.svg" class="cta__p1" alt="">
+                            <img src="./assets/img/general/pattern/6.svg" class="cta__p2" alt="">
+                            <img src="./assets/img/general/pattern/7.svg" class="cta__p3" alt="">
+                        </div>
+                        <article class="cta__heading">
+                            <img src="./assets/img/general/icon/yay.svg" alt="" class="cta__emoji">
+                            <h2 class="cta__title">Got a project? Let’s talk</h2>
+                            <p class="desc cta__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                            <button class="button button1">Book a Call</button>
                         </article>
                     </div>
-                </div>
-            </div>
-        </section>
-        <main>
-            <section class="company common-section">
-                <div class="container company__wrapper">
-                    <section class="company__intro">
-                        <div class="company__sep"></div>
-                        <h2 class="company__title">Meet my recent clients</h2>
-                    </section>
-                    <section class="company__list">
-                        <div class="company">
-                            <img src="./assets/img/page/index/gg.svg" alt="">
-                            <span>Google</span>
-                        </div>
-                        <div class="company">
-                            <img src="./assets/img/page/index/wb.svg" alt="">
-                            <span>Warner Bros</span>
-                        </div>
-                        <div class="company">
-                            <img src="./assets/img/page/index/mc.svg" alt="">
-                            <span>Mailchimp</span>
-                        </div>
-                        <div class="company">
-                            <img src="./assets/img/page/index/ad.svg" alt="">
-                            <span>Adobe</span>
-                        </div>
-                        <div class="company">
-                            <img src="./assets/img/page/index/up.svg" alt="">
-                            <span>Upwork</span>
-                        </div>
-                        <div class="company">
-                            <img src="./assets/img/page/index/cc.svg" alt="">
-                            <span>Creative Cloud</span>
-                        </div>
-                        <div class="company">
-                            <img src="./assets/img/page/index/wo.svg" alt="">
-                            <span>Woocommerce</span>
-                        </div>
-                        <div class="company">
-                            <img src="./assets/img/page/index/cv.svg" alt="">
-                            <span>Canva</span>
-                        </div>
-                    </section>
-                </div>
-            </section>
-            <section class="services common-section">
-                <div class="container services__wrapper">
-                    <h2 class="services__title">Specialities</h2>
-                    <p class="desc services__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
-                    <div class="row services__list">
-                        <div class="col-md-4 col-12">
-                            <section class="services__sv">
-                                <div class="services__avatar">
-                                    <img src="./assets/img/page/index/sv-1.png" alt="Product design">
-                                </div>
-                                <a href="#!"><h3 class="services__svName">Product design</h3></a>
-                                <p class="desc services__svDesc">Lorem ipsum dolor sit amet, solor adipiscing elit. Non nisl solor ut elementum turpis.</p>
-                            </section>
-                        </div>
-                        <div class="col-md-4 col-12">
-                            <section class="services__sv">
-                                <div class="services__avatar">
-                                    <img src="./assets/img/page/index/sv-2.png" alt="UI/UX Design">
-                                </div>
-                                <a href="#!"><h3 class="services__svName">UI/UX Design</h3></a>
-                                <p class="desc services__svDesc">Lorem ipsum dolor sit amet, solor adipiscing elit. Non nisl solor ut elementum turpis.</p>
-                            </section>
-                        </div>
-                        <div class="col-md-4 col-12">
-                            <section class="services__sv">
-                                <div class="services__avatar">
-                                    <img src="./assets/img/page/index/sv-3.png" alt="Interactive design">
-                                </div>
-                                <a href="#!"><h3 class="services__svName">Interactive design</h3></a>
-                                <p class="desc services__svDesc">Lorem ipsum dolor sit amet, solor adipiscing elit. Non nisl solor ut elementum turpis.</p>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="bars services__bars">
-                        <a href="#!" class="pack"></a>
-                        <a href="#!" class="pack pack--selected"></a>
-                        <a href="#!" class="pack"></a>
-                    </div>
-                </div>
-            </section>
-            <section class="projects pj common-section" style="position: relative; z-index: 11;">
-                <section class="container pj__heading">
-                    <h2 class="pj__title">Take a look at my recent projects</h2>
-                    <p class="desc pj__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
                 </section>
-                <div class="container pj__list">
-                    <div class="row pj__listGrid">
-                        <div class="pj__col col-lg-6 col-12">
-                            <section class="pj__item">
-                                <div class="pj__item-bg">
-                                    <div class="pj__pattern"></div>
-                                </div>
-                                <div class="pj__information">
-                                    <section class="pj__text">
-                                        <h3 class="pj__project-name">Wally Website</h3>
-                                        <p class="desc pj__project-desc">Lorem ipsum dolor amet, consectetur adipiscing st elit.</p>
-                                        <a href="#!" class="href">Case Study</a>
-                                    </section>
-                                    <figure class="pj__figure">
-                                        <img src="./assets/img/page/index/wally.png" alt="Wally website">
-                                    </figure>
-                                </div>
-                            </section>
+                <a href="#!" class="scroll"></a>
+            </main>
+            <footer>
+                <div class="out__wrapper footer__wrapper">
+                    <a href="mailto:hi@arif.interactive" class="ctaMail footer__ctaMail ">
+                        <div class="ctaMailIcon footer__ctaMailIcon">
+                            <img src="./assets/img/general/icon/mail.svg" alt="">
                         </div>
-                        <div class="pj__col col-lg-6 col-12">
-                            <section class="pj__item">
-                                <div class="pj__item-bg">
-                                    <div class="pj__pattern"></div>
-                                </div>
-                                <div class="pj__information">
-                                    <section class="pj__text">
-                                        <h3 class="pj__project-name">Banking App</h3>
-                                        <p class="desc pj__project-desc">Lorem ipsum dolor amet, consectetur adipiscing st elit.</p>
-                                        <a href="#!" class="href">Case Study</a>
-                                    </section>
-                                    <figure class="pj__figure">
-                                        <img src="./assets/img/page/index/banking.png" alt="Banking App">
-                                    </figure>
-                                </div>
-                            </section>
-                        </div>
-                        <div class="pj__col col-lg-6 col-12">
-                            <section class="pj__item">
-                                <div class="pj__item-bg">
-                                    <div class="pj__pattern"></div>
-                                </div>
-                                <div class="pj__information">
-                                    <section class="pj__text">
-                                        <h3 class="pj__project-name">Web App</h3>
-                                        <p class="desc pj__project-desc">Lorem ipsum dolor amet, consectetur adipiscing st elit.</p>
-                                        <a href="#!" class="href">Case Study</a>
-                                    </section>
-                                    <figure class="pj__figure">
-                                        <img src="./assets/img/page/index/webapp.png" alt="Web App">
-                                    </figure>
-                                </div>
-                            </section>
-                        </div>
-                        <div class="pj__col col-lg-6 col-12">
-                            <section class="pj__item">
-                                <div class="pj__item-bg">
-                                    <div class="pj__pattern"></div>
-                                </div>
-                                <div class="pj__information">
-                                    <section class="pj__text">
-                                        <h3 class="pj__project-name">Oculus Website</h3>
-                                        <p class="desc pj__project-desc">Lorem ipsum dolor amet, consectetur adipiscing st elit.</p>
-                                        <a href="#!" class="href">Case Study</a>
-                                    </section>
-                                    <figure class="pj__figure">
-                                        <img src="./assets/img/page/index/oculus.png" alt="Oculus Website">
-                                    </figure>
-                                </div>
-                            </section>
-                        </div>
+                        <p class="email footer__email">hi@arif.interactive</p>
+                    </a>
+                    <a class="logo footer__logo" href="./index.html"></a>
+                    <nav class="navbar  navigation_section footer__navbar">
+                        <ul>
+                            <li>
+                                <a href="javascript:;" data-target="projects" title="Projects">Projects</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-target="about" title="Journey">Journey</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-target="services" title="Service">Service</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-target="cta" title="Contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="footer__meta">
+                    <div class="footer__bar"></div>
+                    <p class="copyright">©interactiveArif 2021. All rights reserved.</p>
+                    <div class="footer__sup">
+                        <a href="#!">Privacy Policy</a>
+                        <div class="sep"></div>
+                        <a href="#!">Terms of Conditions</a>
                     </div>
                 </div>
-                <button class="button button2 pj__cta">All Projects</button>
-            </section>
-            <section class="about ab">
-                <div class="container ">
-                    <div class="row">
-                        <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-12 offset-0 ab__heading">
-                            <p class="pseudo ab__pseudo">
-                                <span>Hey,,,,It’s Arif</span>
-                                <img src="./assets/img/general/icon/wave.svg" alt="">
-                            </p>
-                            <h2 class="ab__title">Interactive Designer</h2>
-                            <p class="desc ab__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-10 offset-lg-1 col-12 offset-0">
-                            <div class="ab__keys">
-                                <div class="ab__feature">
-                                    <p class="ab__yr">08+</p>
-                                    <p class="ab__exp">Years Experience</p>
-                                </div>
-                                <div class="ab__feature">
-                                    <p class="ab__yr">21+</p>
-                                    <p class="ab__exp">Features & Awards</p>
-                                </div>
-                                <div class="ab__feature">
-                                    <p class="ab__yr">97%</p>
-                                    <p class="ab__exp">Clients Rating</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="ab__videoWrapper">
-                        <img src="./assets/img/page/index/ab.png" alt="about arif">
-                        <span class="ab__videoDesc">Intro Video</span>
-                        <a href="#!" class="ab__videoCTA"></a>
-                    </div>
-                </div>
-            </section>
-            <section class="testimonial rv">
-                <div class="rv__bg">
-                    <img src="./assets/img/general/pattern/3.svg" alt="">
-                    <img src="./assets/img/general/pattern/4.svg" alt="">
-                </div>
-                <article class="rv__content container">
-                    <h2 class="rv__title">What people says</h2>
-                    <p class="desc rv__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
-                    <div class="rv__list">
-                        <div class="rv__item">
-                            <p class="rv__quote">“Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.”</p>
-                            <div class="rv__user">
-                                <div class="rv__avatar"><img src="./assets/img/page/index/user1.png" alt=""></div>
-                                <span class="rv__username">Joe Elia</span>
-                                <p class="rv__role">User Interface Design at PCL Lab</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bars">
-                        <a href="#!" class="pack"></a>
-                        <a href="#!" class="pack"></a>
-                        <a href="#!" class="pack pack--selected"></a>
-                        <a href="#!" class="pack"></a>
-                        <a href="#!" class="pack"></a>
-                    </div>
-                </article>
-            </section>
-            <section class="faq">
-                <div class="container">
-                    <h2 class="faq__title">A few questions clients normally ask me</h2>
-                    <div class="faq__list">
-                        <div class="faq__item">
-                            <input type="checkbox" name="" id="q-1">
-                            <section class="faq__content">
-                                <label for="q-1" class="faq__question"><h3>What is your  hourly rate?</h3></label>
-                                <p class="faq__answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
-                            </section>
-                            <label for="q-1" class="faq__button"></label>
-                            <div class="faq__bar"></div>
-                        </div>
-                        <div class="faq__item">
-                            <input type="checkbox" name="" id="q-2">
-                            <section class="faq__content">
-                                <label for="q-2" class="faq__question"><h3>What type of projects do you take on?</h3></label>
-                                <p class="faq__answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
-                            </section>
-                            <label for="q-2" class="faq__button"></label>
-                            <div class="faq__bar"></div>
-                        </div>
-                        <div class="faq__item">
-                            <input type="checkbox" name="" id="q-3">
-                            <section class="faq__content">
-                                <label for="q-3" class="faq__question"><h3>How do you charge for projects ?</h3></label>
-                                <p class="faq__answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
-                            </section>
-                            <label for="q-3" class="faq__button"></label>
-                            <div class="faq__bar"></div>
-                        </div>
-                        <div class="faq__item">
-                            <input type="checkbox" name="" id="q-4">
-                            <section class="faq__content">
-                                <label for="q-4" class="faq__question"><h3>What time-zone do you work in?</h3></label>
-                                <p class="faq__answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
-                            </section>
-                            <label for="q-4" class="faq__button"></label>
-                            <div class="faq__bar"></div>
-                        </div>
-                        <div class="faq__item">
-                            <input type="checkbox" name="" id="q-5">
-                            <section class="faq__content">
-                                <label for="q-5" class="faq__question"><h3>How often can we communicate?</h3></label>
-                                <p class="faq__answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
-                            </section>
-                            <label for="q-5" class="faq__button"></label>
-                            <div class="faq__bar"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="env">
-                <div class="container">
-                    <section class="env__heading">
-                        <h2 class="env__title">My atmosphere</h2>
-                        <p class="desc env__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
-                        <a href="#!" class="href env__href">@interaction_arif</a>
-                    </section>
-                    <div class="row env__list">
-                        <div class="col-md-4 col-sm-6 col-12 col">
-                            <img src="./assets/img/page/index/e1.png" alt="">
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12 col">
-                            <img src="./assets/img/page/index/e2.png" alt="">
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12 col">
-                            <img src="./assets/img/page/index/e3.png" alt="">
-                        </div>
-                    </div>
-                    <div class="bars env__bar">
-                        <a href="#!" class="pack"></a>
-                        <a href="#!" class="pack"></a>
-                        <a href="#!" class="pack pack--selected"></a>
-                        <a href="#!" class="pack"></a>
-                        <a href="#!" class="pack"></a>
-                    </div>
-                </div>
-            </section>
-            <section class="cta">
-                <div class="cta__wrapper">
-                    <div class="cta__bg">
-                        <img src="./assets/img/general/pattern/5.svg" class="cta__p1" alt="">
-                        <img src="./assets/img/general/pattern/6.svg" class="cta__p2" alt="">
-                        <img src="./assets/img/general/pattern/7.svg" class="cta__p3" alt="">
-                    </div>
-                    <article class="cta__heading">
-                        <img src="./assets/img/general/icon/yay.svg" alt="" class="cta__emoji">
-                        <h2 class="cta__title">Got a project? Let’s talk</h2>
-                        <p class="desc cta__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
-                        <button class="button button1">Book a Call</button>
-                    </article>
-                </div>
-            </section>
-            <a href="#!" class="scroll"></a>
-        </main>
-        <footer>
-            <div class="out__wrapper footer__wrapper">
-                <a href="mailto:hi@arif.interactive" class="ctaMail footer__ctaMail ">
-                    <div class="ctaMailIcon footer__ctaMailIcon">
-                        <img src="./assets/img/general/icon/mail.svg" alt="">
-                    </div>
-                    <p class="email footer__email">hi@arif.interactive</p>
-                </a>
-                <a class="logo footer__logo" href="./index.html"></a>
-                <nav class="navbar footer__navbar">
-                    <ul>
-                        <li>
-                            <a href="#!" title="Projects">Projects</a>
-                        </li>
-                        <li>
-                            <a href="#!" title="Journey">Journey</a>
-                        </li>
-                        <li>
-                            <a href="#!" title="Service">Service</a>
-                        </li>
-                        <li>
-                            <a href="#!" title="Contact">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            
-            <div class="footer__meta">
-                <div class="footer__bar"></div>
-                <p class="copyright">©interactiveArif 2021. All rights reserved.</p>
-                <div class="footer__sup">
-                    <a href="#!">Privacy Policy</a>
-                    <div class="sep"></div>
-                    <a href="#!">Terms of Conditions</a>
-                </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </body>
 </html>
 
 
 
 
+<!-- 
+
+project: 1803 - 86
+
+
+-->
+<script>
+    AOS.init({once: true});
+</script>
